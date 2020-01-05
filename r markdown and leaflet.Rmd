@@ -1,0 +1,19 @@
+---
+title: "R Markdown and Leaflet"
+author: "g,gambino"
+date: "5/1/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles() %>%  
+  addMarkers(lng=12.492327, lat=41.890186, popup="Colosseo in Rome")
+my_map 
+```{r}
